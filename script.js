@@ -379,11 +379,15 @@ function initVirtualTours() {
     
     const images = [
         'media/room-4.webp',
+        'media/suites-sitting-room.jpg',
         'media/room-2.webp',
+        'media/gallery-1.jpg',
         'media/room-3.webp',
+        'media/standard-room-2.jpg',
         'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg',
-        'media/room-4.webp',
-        'media/fam-room.webp'
+        'media/presidency-room.jpg',
+        'media/fam-room.webp',
+        'media/presidency-room.jpg'
     ];
     
     viewTourBtns.forEach(btn => {

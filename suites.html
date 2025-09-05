@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="media/logo.png" />
+
+    <!-- SEO Title and Description -->
+    <title>Luxury Suites | Soft Touch Hotel Benin City</title>
+    <meta name="description" content="Discover our exquisite suites at Soft Touch Hotel Benin City. Experience luxury, comfort, and world-class amenities in every suite." />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+        /* Responsive adjustments for suites page */
+        @media (max-width: 1024px) {
+            .about-content { flex-direction: column !important; gap: 24px !important; }
+            .about-image img { width: 100% !important; max-width: 320px !important; }
+            .stats { gap: 20px !important; }
+            .snap-carousel { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important; gap: 18px !important; }
+            .room-card { min-width: 220px !important; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 0 10px !important; }
+            .rooms-hero-content h1 { font-size: 2rem !important; }
+            .rooms-hero-content p { font-size: 1rem !important; }
+            .about-content { flex-direction: column !important; gap: 16px !important; }
+            .about-image img { width: 100% !important; max-width: 240px !important; }
+            .stats { flex-direction: column !important; gap: 12px !important; }
+            .snap-carousel { grid-template-columns: 1fr !important; gap: 12px !important; }
+            .room-card { min-width: 100% !important; }
+            .room-image { height: 160px !important; }
+            .room-info { padding: 16px !important; }
+            .section-title h2 { font-size: 1.5rem !important; }
+            .section-title p { font-size: 1rem !important; }
+            .services-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+            .service-card img { max-width: 100% !important; height: auto !important; }
+        }
+        @media (max-width: 480px) {
+            .rooms-hero-content h1 { font-size: 1.2rem !important; }
+            .rooms-hero-content p { font-size: 0.9rem !important; }
+            .about-image img { max-width: 180px !important; }
+            .room-image { height: 100px !important; }
+            .room-info { padding: 8px !important; font-size: 0.95rem !important; }
+            .btn, .btn-primary, .btn-outline { font-size: 0.9rem !important; padding: 8px 12px !important; }
+            .footer-content { flex-direction: column !important; gap: 12px !important; }
+            .footer-section { text-align: center !important; }
+        }
+        </style>
+</head>
+
+<body>
+    <!-- Luxury Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="luxury-logo-container">
+                <div class="luxury-crown">
+                    <div class="crown-jewel crown-jewel-1"></div>
+                    <div class="crown-jewel crown-jewel-2"></div>
+                    <div class="crown-jewel crown-jewel-3"></div>
+                    <div class="crown-base"></div>
+                </div>
+                <h1 class="preloader-logo">Soft Touch Suites</h1>
+            </div>
+            <div class="luxury-tagline">Soft Touch </div>
+            <div class="luxury-loading">
+                <div class="loading-diamonds">
+                    <div class="diamond"></div>
+                    <div class="diamond"></div>
+                    <div class="diamond"></div>
+                </div>
+                <div class="loading-text">Loading your luxury experience...</div>
+            </div>
+        </div>
+        <div class="preloader-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Soft Touch Suites</a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+                <span class="menu-bar top-bar"></span>
+                <span class="menu-bar middle-bar"></span>
+                <span class="menu-bar bottom-bar"></span>
+            </button>
+            <nav id="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="lounge.html">Lounge</a></li>
+                    <li><a href="hotel.html">Hotel</a></li>
+                    <li><a href="suites.html" style="color: var(--gold);">Suites</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Suites Hero Section -->
+    <section class="rooms-hero">
+        <div class="container" style="position:relative; height:100%; display:flex; align-items:center; justify-content:center;">
+            <img src="media/suites-sitting-room.jpg" alt="Luxury Suites" class="about-img" style="width:100%; max-height:60vh; object-fit:cover; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+            <div class="rooms-hero-overlay"></div>
+            <div class="rooms-hero-content" style="position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); text-align:center;">
+                <h1>Our Luxury Suites</h1>
+                <p>Discover the height of comfort and elegance in our exclusive suites</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suites About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title" style="text-align:center;">
+                <h2>Unmatched Suite Experience</h2>
+                <p>Luxury, privacy, and personalized service in every suite</p>
+            </div>
+            <div class="about-content" style="display:flex; flex-wrap:wrap; gap:40px; align-items:center; justify-content:center;">
+                <div class="about-text" style="flex:1; min-width:280px;">
+                    <p>Our suites are designed for guests who desire the very best. Each suite features premium furnishings, spacious living areas, and breathtaking city views. Enjoy world-class amenities and attentive service tailored to your needs.</p>
+                    <p>Whether you choose the Presidential, Executive, Deluxe, or Family Suite, you’ll experience a blend of sophistication and comfort that sets us apart.</p>
+                </div>
+                <div class="about-image" style="flex:1; min-width:280px; text-align:center;">
+                    <img src="media/gallery-2.jpg" alt="Suite Interior" class="about-img-lg" style="width:80%; max-width:400px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.12);">
+                </div>
+            </div>
+            <div class="stats" style="display:flex; justify-content:center; gap:40px; margin-top:40px;">
+                <div class="stat-item" style="text-align:center;">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Suite Types</div>
+                </div>
+                <div class="stat-item" style="text-align:center;">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Guest Satisfaction</div>
+                </div>
+                <div class="stat-item" style="text-align:center;">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Room Service</div>
+                </div>
+                <div class="stat-item" style="text-align:center;">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Star Comfort</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suites Preview Section -->
+    <section class="rooms-preview">
+        <div class="container">
+            <div class="section-title" style="text-align:center;">
+                <h2>Explore Our Suites</h2>
+            </div>
+            <p class="section-subtitle" style="text-align:center;">Choose from our range of luxurious suites, each offering unique features and exceptional comfort.</p>
+            <div class="snap-carousel-container" style="display:flex; align-items:center; justify-content:center; gap:20px;">
+                <button class="carousel-nav prev" aria-label="Previous suite">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="snap-carousel" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; width:100%;">
+                   
+                     <!-- Family Suite -->
+                    <div class="room-card" style="display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.10); overflow:hidden;">
+                        <div class="room-image" style="background-image: url('media/suites-sitting-room.jpg'); width:100%; height:220px; background-size:cover; background-position:center;"></div>
+                        <div class="room-info" style="padding:24px; width:100%;">
+                            <h3 style="text-align:center;">Family Suite</h3>
+                            <div class="room-features" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:12px;">
+                                <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                                <span><i class="fas fa-bath"></i> 2 Bathrooms</span>
+                                <span><i class="fas fa-tv"></i> Multiple TVs</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-couch"></i> Living Area</span>
+                                <span><i class="fas fa-utensils"></i> Kitchenette</span>
+                            </div>
+                            <div class="room-price" style="text-align:center; font-weight:600; color:var(--dark-gold);">₦80,000 per night</div>
+                            <div class="btn-container" style="text-align:center; margin-top:10px;">
+                                <button class="btn btn-primary view-tour-btn">Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Presidential Suite -->
+                    <div class="room-card" style="display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.10); overflow:hidden;">
+                        <div class="room-image" style="background-image: url('media/presidency-room.jpg'); width:100%; height:220px; background-size:cover; background-position:center;"></div>
+                        <div class="room-info" style="padding:24px; width:100%;">
+                            <h3 style="text-align:center;">Presidential Suite</h3>
+                            <div class="room-features" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:12px;">
+                                <span><i class="fas fa-bed"></i> King Size Bed</span>
+                                <span><i class="fas fa-bath"></i> Luxury Bathroom</span>
+                                <span><i class="fas fa-tv"></i> Smart TV</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-car"></i> Valet Parking</span>
+                                <span><i class="fas fa-concierge-bell"></i> 24/7 Service</span>
+                            </div>
+                            <div class="room-price" style="text-align:center; font-weight:600; color:var(--dark-gold);">₦35,000 per night</div>
+                            <div class="btn-container" style="text-align:center; margin-top:10px;">
+                                <button class="btn btn-primary view-tour-btn">Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Suite -->
+                    <div class="room-card" style="display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.10); overflow:hidden;">
+                        <div class="room-image" style="background-image: url('media/gallery-1.jpg'); width:100%; height:220px; background-size:cover; background-position:center;"></div>
+                        <div class="room-info" style="padding:24px; width:100%;">
+                            <h3 style="text-align:center;">Executive Suite</h3>
+                            <div class="room-features" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:12px;">
+                                <span><i class="fas fa-bed"></i> Queen Size Bed</span>
+                                <span><i class="fas fa-bath"></i> Premium Bathroom</span>
+                                <span><i class="fas fa-tv"></i> Smart TV</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-dumbbell"></i> Gym Access</span>
+                                <span><i class="fas fa-swimming-pool"></i> Pool Access</span>
+                            </div>
+                            <div class="room-price" style="text-align:center; font-weight:600; color:var(--dark-gold);">₦30,000 per night</div>
+                            <div class="btn-container" style="text-align:center; margin-top:10px;">
+                                <button class="btn btn-primary view-tour-btn">Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Standard Suite -->
+                    <div class="room-card" style="display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.10); overflow:hidden;">
+                        <div class="room-image" style="background-image: url('media/standard-room.jpg'); width:100%; height:220px; background-size:cover; background-position:center;"></div>
+                        <div class="room-info" style="padding:24px; width:100%;">
+                            <h3 style="text-align:center;">Standard Suite</h3>
+                            <div class="room-features" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:12px;">
+                                <span><i class="fas fa-bed"></i> Queen Size Bed</span>
+                                <span><i class="fas fa-bath"></i> Premium Bathroom</span>
+                                <span><i class="fas fa-tv"></i> Smart TV</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-dumbbell"></i> Gym Access</span>
+                                <span><i class="fas fa-swimming-pool"></i> Pool Access</span>
+                            </div>
+                            <div class="room-price" style="text-align:center; font-weight:600; color:var(--dark-gold);">₦25,000 per night</div>
+                            <div class="btn-container" style="text-align:center; margin-top:10px;">
+                                <button class="btn btn-primary view-tour-btn">Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kings Suite -->
+                    <div class="room-card" style="display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.10); overflow:hidden;">
+                        <div class="room-image" style="background-image: url('media/standard-room-3.jpg'); width:100%; height:220px; background-size:cover; background-position:center;"></div>
+                        <div class="room-info" style="padding:24px; width:100%;">
+                            <h3 style="text-align:center;">Kings Suite</h3>
+                            <div class="room-features" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:12px;">
+                                <span><i class="fas fa-bed"></i> Queen Size Bed</span>
+                                <span><i class="fas fa-bath"></i> Premium Bathroom</span>
+                                <span><i class="fas fa-tv"></i> Smart TV</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-dumbbell"></i> Gym Access</span>
+                                <span><i class="fas fa-swimming-pool"></i> Pool Access</span>
+                            </div>
+                            <div class="room-price" style="text-align:center; font-weight:600; color:var(--dark-gold);">₦20,000 per night</div>
+                            <div class="btn-container" style="text-align:center; margin-top:10px;">
+                                <button class="btn btn-primary view-tour-btn">Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Queens Suite -->
+                    <div class="room-card" style="display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.10); overflow:hidden;">
+                        <div class="room-image" style="background-image: url('media/room-2.jpg'); width:100%; height:220px; background-size:cover; background-position:center;"></div>
+                        <div class="room-info" style="padding:24px; width:100%;">
+                            <h3 style="text-align:center;">Queens Suite</h3>
+                            <div class="room-features" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:12px;">
+                                <span><i class="fas fa-bed"></i> King Size Bed</span>
+                                <span><i class="fas fa-bath"></i> Modern Bathroom</span>
+                                <span><i class="fas fa-tv"></i> LED TV</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-coffee"></i> Mini Bar</span>
+                                <span><i class="fas fa-utensils"></i> Room Service</span>
+                            </div>
+                            <div class="room-price" style="text-align:center; font-weight:600; color:var(--dark-gold);">₦15,000 per night</div>
+                            <div class="btn-container" style="text-align:center; margin-top:10px;">
+                                <button class="btn btn-primary view-tour-btn">Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <button class="carousel-nav next" aria-label="Next suite">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="rooms-preview-cta" style="text-align:center; margin-top:30px;">
+                <a href="#booking" class="btn btn-outline">Book Your Suite</a>
+                <p class="cta-subtext">Reserve your luxury suite and enjoy an unforgettable stay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suites Amenities Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Suite Amenities</h2>
+                <p>Enjoy exclusive facilities and personalized services</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="media/gym.webp" alt="Fitness Center">
+                    <div class="service-overlay">
+                        <h3>Fitness Center</h3>
+                        <p>State-of-the-art equipment and personal training services available 24/7.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="media/hero.jpg" alt="Business Center">
+                    <div class="service-overlay">
+                        <h3>Business Center</h3>
+                        <p>Fully equipped meeting rooms and conference facilities for all your business needs.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="media/pool-1.webp" alt="SoftTouch Pool">
+                    <div class="service-overlay">
+                        <h3>SoftTouch Pool</h3>
+                        <p>Relax and unwind at our luxurious pool area, complete with cabanas and poolside service.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="media/gallery-3.jpg" alt="Event Hall">
+                    <div class="service-overlay">
+                        <h3>Event Hall</h3>
+                        <p>Fully equipped meeting rooms and conference facilities for all your business needs.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="media/reception.jpg" alt="Concierge Service">
+                    <div class="service-overlay">
+                        <h3>Concierge Service</h3>
+                        <p>Our dedicated concierge team ensures every detail of your stay is perfectly managed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section" id="booking">
+        <div class="container">
+            <h2 class="form-title">Book a Suite</h2>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">
+                            <i class="fas fa-user"></i> Full Name
+                        </label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class="fas fa-phone"></i> Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType">
+                            <i class="fas fa-bed"></i> Suite Type
+                        </label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="">Select Suite Type</option>
+                            <option value="presidential">Presidential Suite - ₦150,000</option>
+                            <option value="executive">Executive Suite - ₦95,000</option>
+                            <option value="deluxe">Deluxe Suite - ₦75,000</option>
+                            <option value="family">Family Suite - ₦120,000</option>
+                        </select>
+                        <div class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="date-picker-group">
+                        <label for="checkIn">
+                            <i class="fas fa-calendar-alt"></i> Check-in Date
+                        </label>
+                        <div class="flatpickr-wrapper">
+                            <i class="fas fa-calendar-alt flatpickr-icon"></i>
+                            <input type="text" id="checkIn" name="checkIn" placeholder="Select check-in date" class="flatpickr-input" required readonly>
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="date-picker-group">
+                        <label for="checkOut">
+                            <i class="fas fa-calendar-alt"></i> Check-out Date
+                        </label>
+                        <div class="flatpickr-wrapper">
+                            <i class="fas fa-calendar-alt flatpickr-icon"></i>
+                            <input type="text" id="checkOut" name="checkOut" placeholder="Select check-out date" class="flatpickr-input" required readonly>
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">
+                        <i class="fas fa-users"></i> Number of Guests
+                    </label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5+">5+ Guests</option>
+                    </select>
+                    <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests">
+                        <i class="fas fa-comment"></i> Special Requests (Optional)
+                    </label>
+                    <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or dietary requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Reserve Now
+                </button>
+                <div class="form-success" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Booking request submitted successfully! We'll contact you shortly to confirm your reservation.</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Overlay -->
+    <div class="virtual-tour-overlay" id="virtualTourOverlay">
+        <div class="virtual-tour-container">
+            <img src="media/suites-sitting-room.jpg" alt="Suite Tour" class="tour-image" id="tourImage">
+            <div class="tour-controls">
+                <button class="tour-prev" id="tourPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="tour-progress" id="tourProgress">1/4</span>
+                <button class="tour-next" id="tourNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <button class="close-tour" id="closeTour">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2347067826432" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Us</h2>
+                <p>Located in the heart of Benin City</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.9304174553017!2d5.60473357499187!3d6.402966593587705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d3b6f7092e95%3A0x1543ab58ee3ff3d9!2sSoft%20Touch%20Hotel%20and%20Suites!5e0!3m2!1sen!2sng!4v1756915795472!5m2!1sen!2sng"
+                    width="600" height="450" style="border:0;" allowfullscreen="" 
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Soft Touch</h3>
+                    <p>Benin's premier destination for luxury hospitality, offering 3 unique experiences in 1 exquisite location in Benin City.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/SoftTouchbenincity" target="_blank"><i class="fab fa-instagram" style="color: #E4405F;"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok" style="color: #ebebeb;"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-snapchat" style="color: #FFFC00;"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook" style="color: #1877F3;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> &nbsp; 3, 24th street, EDPA Quarters, Benin City, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> &nbsp; 0813 270 0321</p>
+                    <p><i class="fab fa-whatsapp"></i> &nbsp; 07067826432</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="lounge.html">Elegant Lounge</a></p>
+                    <p><a href="restaurant.html">Fine Dining Restaurant</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Soft Touch | Designed by Elikiba&trade;</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
